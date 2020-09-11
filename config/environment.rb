@@ -1,5 +1,9 @@
-# Load the rails application.
-require File.expand_path('../application', __FILE__)
+require "bundler/setup"
+Bundler.require
+require "sinatra/activerecord"
+require "ostruct"
+require "date"
+require_all 'app/models'
 
-# Initialize the rails application.
-SampleApp::Application.initialize!
+ENV["SINATRA_ENV"] ||= 'development'
+ActiveRecord::Base.establish_connection(ENV["SINATRA_ENV"].to_sym)

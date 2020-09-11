@@ -1,7 +1,34 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Yoga Studio (name, location, phone_number, website)
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+YogaStudio.create(name: Faker::Name.name, location: Faker::Address.full_address, phone_number: Faker::Base.numerify('+90(###) ### ###'), website: Faker::Internet.url(host: 'example.com'))
+
+# Users(name, age, number, years_experience)
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+User.create(name: Faker::Name.name, age: Faker::Number.number(digits: 2), years_experience: Faker::Number.number(digits: 2))
+
+# Yoga Reviews(user_id,yoga_studio_id, rating)
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
+Review.create(user_id: User.all.sample.id, yoga_studio_id: YogaStudio.all.sample.id, rating: Faker::Number.between(from: 1, to: 5))
